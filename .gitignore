@@ -29,3 +29,5 @@ storybook-static
 
 # Testing
 coverage
+
+*storybook.log

@@ -1,22 +1,21 @@
 {
-  "name": "vite-component-library-template",
+  "name": "learn-wc-library",
   "private": false,
-  "version": "3.0.1",
-  "packageManager": "pnpm@10.12.1",
+  "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/IgnacioNMiranda/vite-component-library-template"
+    "url": "https://github.com/daslef/learn-wc-projects"
   },
-  "main": "./dist/vite-component-library-template.umd.js",
-  "module": "./dist/vite-component-library-template.es.js",
+  "main": "./dist/learn-wc-library.umd.js",
+  "module": "./dist/learn-wc-library.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/vite-component-library-template.es.js",
-      "require": "./dist/vite-component-library-template.umd.js"
+      "import": "./dist/learn-wc-library.es.js",
+      "require": "./dist/learn-wc-library.umd.js"
     },
-    "./styles.css": "./dist/vite-component-library-template.css"
+    "./styles.css": "./dist/learn-wc-library.css"
   },
   "engines": {
     "node": ">=22"
@@ -29,46 +28,30 @@
     "format": "npx @biomejs/biome check --write --organize-imports-enabled=true ./src",
     "test": "vitest",
     "test:cov": "vitest run --coverage",
-    "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\""
-  },
-  "dependencies": {
-    "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\"",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "devDependencies": {
-    "@babel/core": "7.27.4",
-    "@biomejs/biome": "2.0.4",
-    "@storybook/addon-docs": "9.0.12",
-    "@storybook/addon-links": "9.0.12",
-    "@storybook/addon-themes": "9.0.12",
-    "@storybook/react-vite": "9.0.12",
-    "@storybook/test": "8.6.14",
-    "@tailwindcss/postcss": "4.1.10",
-    "@tailwindcss/vite": "4.1.10",
-    "@testing-library/react": "16.3.0",
-    "@types/node": "24.0.3",
-    "@types/react": "19.1.8",
-    "@types/react-dom": "19.1.6",
-    "@vitejs/plugin-react": "4.5.2",
-    "@vitest/coverage-v8": "3.2.4",
-    "autoprefixer": "10.4.21",
-    "babel-loader": "10.0.0",
-    "husky": "9.1.7",
-    "jsdom": "26.1.0",
-    "json": "11.0.0",
-    "lint-staged": "16.1.2",
-    "postcss": "8.5.6",
-    "prop-types": "15.8.1",
-    "storybook": "9.0.12",
-    "tailwindcss": "4.1.10",
-    "typescript": "5.8.3",
-    "vite": "6.3.5",
-    "vite-plugin-dts": "4.5.4",
-    "vitest": "3.2.4"
-  },
-  "peerDependencies": {
-    "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "@biomejs/biome": "^2.1.4",
+    "@chromatic-com/storybook": "^4.1.0",
+    "@storybook/addon-a11y": "^9.1.2",
+    "@storybook/addon-docs": "^9.1.2",
+    "@storybook/addon-vitest": "^9.1.2",
+    "@storybook/web-components-vite": "^9.1.2",
+    "@types/node": "^24.2.1",
+    "@vitest/browser": "3.2.4",
+    "@vitest/coverage-v8": "^3.2.4",
+    "husky": "^9.1.7",
+    "jsdom": "^26.1.0",
+    "lint-staged": "^16.1.2",
+    "lit": "^3.3.1",
+    "playwright": "^1.54.2",
+    "storybook": "^9.1.2",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.1",
+    "vite-plugin-dts": "^4.5.4",
+    "vitest": "^3.2.4"
   },
   "files": [
     "dist"
