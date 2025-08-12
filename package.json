@@ -24,17 +24,19 @@
     "dev": "storybook dev -p 6006",
     "build": "storybook build",
     "build:lib": "tsc && vite build",
+    "build:storybook": "storybook build",
     "lint": "npx @biomejs/biome lint --write ./src",
     "format": "npx @biomejs/biome check --write --organize-imports-enabled=true ./src",
     "test": "vitest",
     "test:cov": "vitest run --coverage",
-    "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\"",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "test:storybook": "test-storybook",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\""
   },
   "devDependencies": {
     "@biomejs/biome": "^2.1.4",
-    "@chromatic-com/storybook": "^4.1.0",
+    "@playwright/test": "^1.54.2",
     "@storybook/addon-a11y": "^9.1.2",
     "@storybook/addon-docs": "^9.1.2",
     "@storybook/addon-vitest": "^9.1.2",
@@ -63,5 +65,8 @@
       "biome lint --write --no-errors-on-unmatched --files-ignore-unknown=true",
       "biome format --write --no-errors-on-unmatched"
     ]
+  },
+  "dependencies": {
+    "@storybook/test-runner": "^0.23.0"
   }
 }
