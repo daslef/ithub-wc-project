@@ -1,4 +1,4 @@
-import type { Validator } from '../input-text/validator'
+import type { Validator } from '../input-text/validate'
 
 type ValidatedHTMLElement = HTMLElement & { validator : Validator }
 type ValidatorsObject = { [K: string] : Validator }
