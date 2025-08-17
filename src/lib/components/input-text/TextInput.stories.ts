@@ -1,27 +1,9 @@
-// const validators: ValidatorsMapping = {
-//   username: {
-//     validations: [
-//       {
-//         flag: { valueMissing: true },
-//         message: "Error: Required",
-//         condition: (input: TextInputInterface) => input.required && input.value.length === 0,
-//       },
-//       {
-//         flag: { badInput: true },
-//         message: "Error: Incorrect username",
-//         condition: (input: TextInputInterface) => input.value.length > 0 && !(/^[a-zA-Z]+$/.test(input.value)),
-//       },
-//     ],
-//   },
-// };
-
-
 import { html } from "lit-html";
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { TextInputComponent } from "./TextInput";
 import type { Validator, ValidatorsMapping, TextInputInterface } from './types'
 
-const validators: ValidatorsMapping = {
+export const validators: ValidatorsMapping = {
   username: {
     validations: [
       {
@@ -29,6 +11,11 @@ const validators: ValidatorsMapping = {
         message: "Error: Required",
         condition: (input) => input.required && input.value.length === 0,
       },
+      //       {
+      //         flag: { badInput: true },
+      //         message: "Error: Incorrect username",
+      //         condition: (input: TextInputInterface) => input.value.length > 0 && !(/^[a-zA-Z]+$/.test(input.value)),
+      //       },
     ],
   },
 };
