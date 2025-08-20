@@ -13,5 +13,6 @@ export type ValidatorsMapping = {
 export type TextInputInterface = HTMLElement & Pick<HTMLInputElement, 'value' | 'required'> & {
   validator: Validator,
   validity: ValidityState,
-  input: HTMLInputElement
+  input: HTMLInputElement,
+  [symbolMethod: symbol]: () => void
 }

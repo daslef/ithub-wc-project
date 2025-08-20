@@ -1,2 +1,2 @@
 export { Component, type ElementMeta } from './decorator'
-export { attachShadow } from './template'
+export { attachShadow, attachStyle, attachTemplate, html, css } from './template'

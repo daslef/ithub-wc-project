@@ -1,7 +1,6 @@
 import type { Validator } from "./types";
 import validate from "./validate";
 
-
 export class TextInputComponent extends HTMLElement {
   static formAssociated = true;
 

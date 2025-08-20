@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { TextInputComponent } from "./TextInput";
 import type { Validator, ValidatorsMapping, TextInputInterface } from './types'
 
-export const validators: ValidatorsMapping = {
+const validators: ValidatorsMapping = {
   username: {
     validations: [
       {
