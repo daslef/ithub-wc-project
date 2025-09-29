@@ -1,7 +1,0 @@
-
-    <card-component>
-        <img slot="header" src="https://images.unsplash.com/photo-1612392167062-8f76710986ba?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80">
-        <h4 slot="header">Food</h4>
-        <p slot="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr ud exercitation ullamco laboris nisi ut aliquip ex ea comamodo consequat.</p>
-        <a href="#" slot="footer">Read</a>
-    </card-component>
