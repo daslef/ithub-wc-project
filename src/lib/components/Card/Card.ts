@@ -14,10 +14,27 @@ export default class CardComponent extends HTMLElement {
           background-color: white;
           box-shadow: var(--shadow);
         }
+
+        .card__header {
+          height: 180px;
+          width: 100%;
+          border-top-left-radius: 16px;
+          border-top-right-radius: 16px;
+        }
+
+        ::slotted(img) {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+          border-top-left-radius: 16px;
+          border-top-right-radius: 16px;
+        }
       </style>
 
       <article class="card">
-    
+        <header class="card__header">
+          <slot name="image"></slot>
+        </header>
       </article>
     `;
 
