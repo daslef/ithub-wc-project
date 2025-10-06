@@ -10,13 +10,13 @@ export default class CardComponent extends HTMLElement {
         .card {
           min-height: 377px;
           width: 320px;
-          border-radius: 16px;
+          border-radius: var(--radius-md);
           background-color: white;
           box-shadow: var(--shadow);
         }
 
         .card__header {
-          height: 180px;
+          max-height: 180px;
           width: 100%;
           border-top-left-radius: 16px;
           border-top-right-radius: 16px;
@@ -29,12 +29,23 @@ export default class CardComponent extends HTMLElement {
           border-top-left-radius: 16px;
           border-top-right-radius: 16px;
         }
+
+        /* TODO постараться переиспользовать дизайн-токены из global.css */
+        /* TODO добавить стили для ::slotted(h3), ::slotted(p) */
+        /* TODO добавить стили для ::slotted([name]="ui") */
       </style>
 
       <article class="card">
         <header class="card__header">
           <slot name="image"></slot>
         </header>
+        <section class="card__content">
+          <slot name="title"></slot>
+          <slot name="content"></slot>
+        </section>
+        <footer class="card__ui">
+          <slot name="ui"></slot>
+        </footer>
       </article>
     `;
 
