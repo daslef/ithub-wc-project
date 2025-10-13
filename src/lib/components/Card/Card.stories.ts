@@ -2,22 +2,25 @@ import "./Card";
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 
 type DefaultArgs = {
-  title: string,
-  content: string
-  imageSrc?: string
-}
+  title: string;
+  content: string;
+  imageSrc?: string;
+};
 
-type ImageArgs = {
-  hasImage: true,
-  imageSrc: string
-} | { hasImage: false }
+type ImageArgs =
+  | {
+    hasImage: true;
+    imageSrc: string;
+  }
+  | { hasImage: false };
 
-type Args = DefaultArgs & ImageArgs
+type Args = DefaultArgs & ImageArgs;
 
 const defaultArgs = {
   title: "Food",
-  content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-}
+  content:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+};
 
 export const CardDefault: StoryObj<Args> = {
   args: {
@@ -40,14 +43,14 @@ export default {
   argTypes: {
     hasImage: {
       table: {
-        disable: true
-      }
+        disable: true,
+      },
     },
     title: {
       control: {
-        type: "text"
-      }
-    }
+        type: "text",
+      },
+    },
   },
   render: ({ imageSrc, hasImage, title, content }) => {
     if (hasImage) {
