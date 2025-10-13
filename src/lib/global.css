@@ -95,34 +95,6 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-a:link,
-a:visited {
-    font-family: var(--font-default);
-    font-weight: var(--font-weight-default);
-    font-size: var(--font-body-md);
-    text-decoration: none;
-    color: var(--color-blue-500);
-}
-
-a:link.link-button,
-a:visited.link-button {
-    line-height: 1em;
-    padding-top: calc(var(--padding-sm) - 1px);
-    padding-bottom: calc(var(--padding-sm) + 1px);
-    border: 2px solid transparent;
-    border-radius: 12px;
-}
-
-a:focus.link-button {
-    border: 2px solid var(--color-black);
-    color: var(--color-black);
-}
-
-a:active.link-button {
-    border: 2px solid var(--color-neutral-500);
-    color: var(--color-neutral-500);
-}
-
 h4 {
     font-family: var(--font-default);
     font-weight: var(--font-weight-default);

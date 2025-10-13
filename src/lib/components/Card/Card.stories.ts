@@ -56,6 +56,7 @@ export default {
           <img slot="image" src=${imageSrc} alt="stereogram" />
           <h3 slot="title">${title}</h3>
           <p slot="content">${content}</p>
+          <a slot="ui" href="https://ya.ru">Read</a>
         </card-component>
       `;
     }
@@ -63,7 +64,8 @@ export default {
     return `
       <card-component>
         <h3 slot="title">${title}</h3>
-        <p slot="content">${content}</p>      
+        <p slot="content">${content}</p>     
+        <button slot="ui">Submit</button> 
       </card-component>
     `;
   },

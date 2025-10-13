@@ -22,6 +22,14 @@ export default class CardComponent extends HTMLElement {
           border-top-right-radius: 16px;
         }
 
+        .card__content {
+          padding: 25px 24px 11px 24px;
+        }
+
+        .card__footer {
+          /* Настроить отступы и расположение */
+        }
+
         ::slotted(img) {
           object-fit: cover;
           width: 100%;
@@ -30,9 +38,24 @@ export default class CardComponent extends HTMLElement {
           border-top-right-radius: 16px;
         }
 
+        ::slotted(h3) {
+          /* добавить стили для заголовка */
+        }
+        
+        ::slotted(p) {
+          /* добавить стили для текста */
+        }
+
+        ::slotted(button) {
+          /* добавить стили для кнопок футера */
+        }
+
+        ::slotted(a) {
+          margin-left: 50%;
+          /* добавить стили для ссылок футера */
+        }
+               
         /* TODO постараться переиспользовать дизайн-токены из global.css */
-        /* TODO добавить стили для ::slotted(h3), ::slotted(p) */
-        /* TODO добавить стили для ::slotted([name]="ui") */
       </style>
 
       <article class="card">
